@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>Hello Gridea | Gridea</title>
+<title>C++基本语法易错易忘知识大合集 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -80,51 +80,53 @@
       <div class="content-container">
         <div class="post-detail">
           
-            <div class="feature-container" style="background-image: url('https://cgqzsyc.github.io/post-images/hello-gridea.png')">
-            </div>
-          
-          <h2 class="post-title">Hello Gridea</h2>
+          <h2 class="post-title">C++基本语法易错易忘知识大合集</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2018-12-12</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://cgqzsyc.github.io/tag/WDx9fDtbC/">
-                    Gridea
-                    
-                  </a>
-                
-              </span>
+            <span><i class="icon-calendar-outline"></i> 2020-08-21</span>
             
           </div>
           <div class="post-content">
-            <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+            <p>一、表达式<br>
+1.基本运算符优先级：（1）+、-   &lt;  *、/、%；<br>
+（2）算术运算符&gt;关系运算符（E:&gt;=,<mark>）&gt;赋值运算符。<br>
+2.特殊情况：<br>
+E1：a=14   t1=a++  执行完后t1=14!!    a=14   t2=++a  执行完t1=15!!<br>
+E2：int i=1; printf(&quot;%d&quot;,i++)   此时输出的是1而非2！（若为++i，则会输出2）<br>
+3.一个语句成立（例如i</mark>j）：返回值为1，反之为0<br>
+例如：E1：  int k,i=1,j=2;<br>
+k=i==j;<br>
+执行完以上语句后k=0.<br>
+E2:     int i=5,j=10,k=1;<br>
+printf(&quot;%d&quot;k&gt;i&lt;j);<br>
+k&gt;i不合法故返回值为0，返回值0显然&lt;j=10,故最终会输出1。<br>
+二、判断语句：<br>
+if语句中：只有“if”后括号内的表达式返回值为1或变（常）量值为1时才会执行。<br>
+三、分支语句<br>
+1.else语句的匹配：else总是和最近的那个if匹配。<br>
+2.为防止执行错乱，无论if与else后面有多少语句（哪怕只有一句），原则上都要加大括号。<br>
+四、循环语句<br>
+1.关于for语句的执行顺序（虽然潜移默化中确实早已此为常识，但单说时也着实令我懵了一下）：<br>
+for ( 初始动作; 条件; 每轮的动作 ) {......}<br>
+执行顺序：初始动作（只执行一遍）---&gt;条件---&gt; {......}---&gt;每轮的动作---&gt;条件---&gt; {......}---&gt;每轮的动作（不断重复上述三个步骤直到循环结束）。<br>
+2.在嵌套循环中，continue语句只能对它所在的那层循环做，break只能使程序执行跳出它所在的那层循环。<br>
+3.关于switch语句：在含有switch语句的片段中，“switch”后括号内的东西通常被称作为控制表达式，控制表达式只能是整数（char严格来说也算“整数”（ASCLL码），因此可以作为控制表达式）。<br>
+4.<br>
+五、数据存储整数类型及一些必要技巧<br>
+1.函数sizeof(&lt;一个变量&gt;)：返回该变量所占的字节数。<br>
+2.</p>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://cgqzsyc.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       

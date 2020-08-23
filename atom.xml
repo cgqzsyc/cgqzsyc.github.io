@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cgqzsyc.github.io</id>
     <title>Gridea</title>
-    <updated>2020-08-19T12:59:55.233Z</updated>
+    <updated>2020-08-23T13:01:22.978Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cgqzsyc.github.io"/>
     <link rel="self" href="https://cgqzsyc.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://cgqzsyc.github.io/images/avatar.png</logo>
     <icon>https://cgqzsyc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[C++基本语法易错易忘知识大合集]]></title>
+        <id>https://cgqzsyc.github.io/post/cji-ben-yu-fa-yi-cuo-yi-wang-zhi-shi-da-he-ji/</id>
+        <link href="https://cgqzsyc.github.io/post/cji-ben-yu-fa-yi-cuo-yi-wang-zhi-shi-da-he-ji/">
+        </link>
+        <updated>2020-08-21T09:40:32.000Z</updated>
+        <content type="html"><![CDATA[<p>一、表达式<br>
+1.基本运算符优先级：（1）+、-   &lt;  *、/、%；<br>
+（2）算术运算符&gt;关系运算符（E:&gt;=,<mark>）&gt;赋值运算符。<br>
+2.特殊情况：<br>
+E1：a=14   t1=a++  执行完后t1=14!!    a=14   t2=++a  执行完t1=15!!<br>
+E2：int i=1; printf(&quot;%d&quot;,i++)   此时输出的是1而非2！（若为++i，则会输出2）<br>
+3.一个语句成立（例如i</mark>j）：返回值为1，反之为0<br>
+例如：E1：  int k,i=1,j=2;<br>
+k=i==j;<br>
+执行完以上语句后k=0.<br>
+E2:     int i=5,j=10,k=1;<br>
+printf(&quot;%d&quot;k&gt;i&lt;j);<br>
+k&gt;i不合法故返回值为0，返回值0显然&lt;j=10,故最终会输出1。<br>
+二、判断语句：<br>
+if语句中：只有“if”后括号内的表达式返回值为1或变（常）量值为1时才会执行。<br>
+三、分支语句<br>
+1.else语句的匹配：else总是和最近的那个if匹配。<br>
+2.为防止执行错乱，无论if与else后面有多少语句（哪怕只有一句），原则上都要加大括号。<br>
+四、循环语句<br>
+1.关于for语句的执行顺序（虽然潜移默化中确实早已此为常识，但单说时也着实令我懵了一下）：<br>
+for ( 初始动作; 条件; 每轮的动作 ) {......}<br>
+执行顺序：初始动作（只执行一遍）---&gt;条件---&gt; {......}---&gt;每轮的动作---&gt;条件---&gt; {......}---&gt;每轮的动作（不断重复上述三个步骤直到循环结束）。<br>
+2.在嵌套循环中，continue语句只能对它所在的那层循环做，break只能使程序执行跳出它所在的那层循环。<br>
+3.关于switch语句：在含有switch语句的片段中，“switch”后括号内的东西通常被称作为控制表达式，控制表达式只能是整数（char严格来说也算“整数”（ASCLL码），因此可以作为控制表达式）。<br>
+4.<br>
+五、数据存储整数类型及一些必要技巧<br>
+1.函数sizeof(&lt;一个变量&gt;)：返回该变量所占的字节数。<br>
+2.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://cgqzsyc.github.io/post/hello-gridea/</id>
